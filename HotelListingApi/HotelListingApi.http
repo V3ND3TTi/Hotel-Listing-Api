@@ -1,43 +1,6 @@
 @HotelListingApi_HostAddress = https://localhost:7120
 ###
 
-GET {{HotelListingApi_HostAddress}}/api/hotels
-
-###
-
-@id=4
-GET {{HotelListingApi_HostAddress}}/api/hotels/{{id}}
-
-###
-
-POST {{HotelListingApi_HostAddress}}/api/hotels
-Content-Type: application/json
-
-{
-  "id": 4,
-  "name": "Westin East",
-  "address": "2102 Western Ave",
-  "rating": 4.2
-}
-
-###
-
-PUT {{HotelListingApi_HostAddress}}/api/hotels/{{id}}
-Content-Type: application/json
-
-{
-  "id": 2,
-  "name": "Ocean View",
-  "address": "123 Beach Ave",
-  "rating": 4.9
-}
-
-###
-
-DELETE {{HotelListingApi_HostAddress}}/api/hotels/{{id}}
-
-###
-
 GET {{HotelListingApi_HostAddress}}/api/countries
 
 ###
@@ -65,5 +28,36 @@ Content-Type: application/json
 ###
 
 DELETE {{HotelListingApi_HostAddress}}/api/countries/{{id}}
+
+###
+
+GET {{HotelListingApi_HostAddress}}/api/hotels
+
+###
+
+@id=0
+GET {{HotelListingApi_HostAddress}}/api/hotels/{{id}}
+
+###
+
+POST {{HotelListingApi_HostAddress}}/api/hotels
+Content-Type: application/json
+
+{
+  //Hotel
+}
+
+###
+
+PUT {{HotelListingApi_HostAddress}}/api/hotels/{{id}}
+Content-Type: application/json
+
+{
+  //Hotel
+}
+
+###
+
+DELETE {{HotelListingApi_HostAddress}}/api/hotels/{{id}}
 
 ###

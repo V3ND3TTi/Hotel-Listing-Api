@@ -1,6 +1,11 @@
+using HotelListingApi.Data;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+var connectionString = builder.Configuration.GetConnectionString("HotelListingDbConnection");
+builder.Services.AddDbContext<HotelListingDbContext>(options => options.UseSqlServer(connectionString));
 
 builder.Services.AddControllers();
 
